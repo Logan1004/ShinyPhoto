@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="publicJs.js"></script>
+    <script src="mainPageJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="mainPageStytle.css">
+    <title>Main</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="mainPageNav">
+        <div class="container-fluid">
+            <div class="navbar-header col-md-3">
+                <img src="publicImg/NonBG_Logo.png" class="navLogo">
+            </div>
+            <div class="col-md-4" style="height: 88px"></div>
+            <ul class="nav navbar-nav" style="margin-top: 20px;">
+                <li><a href="../Home/Index">首页</a></li>
+                <li><a href="../Eqpt/EqptPage">器材组凭</a></li>
+                <li><a href="../Pic/PicPage">图片服务</a></li>
+                <li><a href="../AboutUs/AboutUs">关于我们</a></li>
+                <li>
+                    @if (!string.IsNullOrEmpty(HttpContext.Current.Request["loginState"]))
+                    {
+                    <a href="../Home/UserInfo">@HttpContext.Current.Request["loginState"]</a>
+                    }
+                    else
+                    {
+                    <a href="../Login/Login">登录</a>
+                    }
+                </li>
+                <div class="page-header"></div>
+            </ul>
+        </div>
+    </nav>
+
+    <!--欢迎界面轮播图-->
+    <div class="container-fluid" style="padding: 0px; height: 100%; max-height: 100%">
+        <div id="topSlide" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item  active">
+                    <img class="topSlideImg" alt="" src="publicImg/MainPhoto1_Final.jpg">
+                </div>
+                <div class="item">
+                    <img class="topSlideImg" alt="" src="publicImg/MainPhoto2_Final.jpg">
+                </div>
+                <div class="item">
+                    <img class="topSlideImg" alt="" src="publicImg/MainPhoto3_Final.jpg">
+                </div>
+                <div class="item">
+                    <img class="topSlideImg" alt="" src="publicImg/MainPhoto4_Final.jpg">
+                </div>
+            </div>
+            <a class="left carousel-control" data-slide="prev" href="#topSlide"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" data-slide="next" href="#topSlide"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+
+    <!--空白-->
+    <div class="row">
+        <div class="col-md-4"></div>
+        <h2 class="col-md-4" style="text-align: center"></h2>
+        <div class="col-md-4"></div>
+    </div>
+
+    <!--器材种类选择ver1-->
+    <div class="container-fluid" style="margin-top: 35px" id="eqptShow">
+        <div class="row">
+            <div class="col-md-3" style="text-align: center">
+                <a href="eqptPage/eqptPage.html?typeIndex=0&curPage=1">
+                    <img src="publicImg/Vidicon.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">摄像机</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="eqptPage/eqptPage.html?typeIndex=1&curPage=1">
+                    <img src="publicImg/SLRCamera.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">单反</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="eqptPage/eqptPage.html?typeIndex=2&curPage=1">
+                    <img src="publicImg/CameraLens.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">镜头</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="eqptPage/eqptPage.html?typeIndex=3&curPage=1">
+                    <img src="publicImg/UAV.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">航拍飞机</p>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-3" style="text-align: center">
+                <a href="eqptPage/eqptPage.html?typeIndex=4&curPage=1">
+                    <img src="publicImg/Tripod.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">三脚架</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="eqptPage/eqptPage.html?typeIndex=5&curPage=1">
+                    <img src="publicImg/Polaroid.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">拍立得</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="eqptPage/eqptPage.html?typeIndex=6&curPage=1">
+                    <img src="publicImg/Other.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">其他</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="gallery" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <h2 class="col-md-4" style="text-align: center">画廊展示</h2>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <h2 class="col-md-4" style="text-align: center"></h2>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_1.jpg" class="testPic"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_2.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_3.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_4.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_5.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_6.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_7.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_8.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_9.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_10.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_11.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="publicImg/PhotoShow_12.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <!--Footer-->
+    <div class="footer">
+        <div class="newContainer">
+            <div class="footer-text">
+                <p>Contact US @1585084146@qq.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

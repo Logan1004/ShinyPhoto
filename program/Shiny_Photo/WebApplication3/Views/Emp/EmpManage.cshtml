@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "EmpManage";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="~/Resource/jquery-3.3.1.min.js"></script>
+    <script src="~/Resource/jquery.cookie.js"></script>
+    <script src="~/Resource/bootstrap.min.js"></script>
+    <script src="~/Resource/publicJs.js"></script>
+    <script src="~/Resource/userPage/js/empJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Resource/publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="~/Resource/userPage/css/empPageStyle.css">
+    <title>empPage</title>
+</head>
+<body>
+    <!--用户服务-->
+    <ul class="nav nav-tabs container" role="tablist" id="empTab">
+        <li role="presentation" class="col-md-12 active"><a href="#service1" role="tab" data-toggle="tab" style="padding: 0px">待修图片</a></li>
+    </ul>
+    <div class="tab-content container" id="empTabContent">
+        <div class="tab-pane active" id="service1">
+            <div class="container-fluid">
+                <ul style="background-color: white; padding: 0px; list-style: none; width: 100%; margin-top: 20px" id="picContainer">
+                    @foreach (var pic in (List<WebApplication3.Models.CONTRACT_PHOTO_INFO>)ViewData["PIC"])
+                    {
+                        var imgSrc = "../../DownloadedPictures/" + @pic.ALL_PHOTO.PHOTO_ADDRESS + ".jpg";
+                        <li>
+                            <div class="thumbnail col-md-3">
+                                <div class="wrap">
+                                    <img src=@imgSrc>
+                                </div>
+                                <div class="caption">
+                                    <div class="container-fluid" style="padding: 0px">
+                                        <div class="col-md-5" style="text-align: left; padding: 0px">修图师编号：@pic.CONTRACT_PHOTOREPAIRER_ID</div>
+                                        <div class="col-md-5" style="text-align: left; padding: 0px">   费用：¥ @pic.CONTRACT_PAYMENT</div>
+                                    </div>
+                                    <div class="container-fluid" style="padding: 0px">
+                                        <div class="col-md-12" style="text-align: left; padding: 0px">开始日期：@pic.CONTRACT_START_DATE.ToShortDateString()</div>
+                                       
+                                    </div>
+                                    <div class="container-fluid" style="padding: 0px">
+                                        <div class="col-md-12" style="text-align: left; padding: 0px">截止日期：@pic.CONTRACT_END_DATE.ToShortDateString()</div>
+                                    </div>
+                                    <p class="desc">@pic.ALL_PHOTO.PHOTO_REQUIREMENT</p>
+                                </div>
+                            </div>
+                        </li>
+                    }
+
+                </ul>
+                <div class="row" style="text-align: center">
+
+                </div>
+                <div class="row" style="text-align: center">
+                    <ul class="pagination" style="border: black 0px solid; text-align: center" id="myPagination">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

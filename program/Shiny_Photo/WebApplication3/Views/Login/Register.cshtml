@@ -1,0 +1,178 @@
+﻿@model Tuple<WebApplication3.Models.ALL_USER_TEL, WebApplication3.Models.ALL_LOGIN_INFO, WebApplication3.Models.ALL_ADDRESS, WebApplication3.Models.CUSTOMER>
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+    <script src="~/Resource/regPage/js/regPageJs.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Resource/regPage/css/regPageStyle.css">
+    <title>Reg</title>
+    <!--注册-->
+
+    <div class="container" style="height: 650px; background-color: white">
+        <div class="row center-block" style="text-align: center; margin-top: 20px">
+            <div class="col-md-3 col-md-offset-2" style="height: 30px; border-bottom: black 1px solid;"></div>
+            <div class="col-md-2" style="font-size: 40px">
+                注册
+            </div>
+            <div class="col-md-3" style="height: 30px; border-bottom: black 1px solid;"></div>
+        </div>
+        <div class="col-md-8 col-md-offset-2" id="regBorder" style="background-color: white">
+            @using (Html.BeginForm("Registerppo", "Login", FormMethod.Post, new { style = "margin-top: 20px" }))
+            {
+                <!--用户名-->
+                <div class="row" style="margin-top: 25px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel">用户名:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="userName">用户名</label>
+                            @Html.EditorFor(model => model.Item2.USER_LOGIN_NAME, new { htmlAttributes = new { placeholder = "您的昵称", @class = "form-control", style = "height: 40px" } })
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("NAME") && ViewData.ModelState["NAME"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["NAME"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">您登陆所使用的用户名</span>-->
+                </div>
+                <!--密码-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel">密码:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="pwd"></label>
+                            @Html.PasswordFor(model => model.Item2.USER_PASSWORD, new { placeholder = "您的密码", @class = "form-control", style = "height: 40px" })
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("PASSWORD") && ViewData.ModelState["PASSWORD"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["PASSWORD"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">建议您使用数字与字母的组合</span>-->
+                </div>
+                <!--确认密码-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel">确认密码:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="confirm"></label>
+                            <input type="password" id="confirm" class="form-control" name="confirm" placeholder="确认您的密码" style="height: 40px">
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("CONFIRM") && ViewData.ModelState["CONFIRM"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["CONFIRM"].Errors[0].ErrorMessage</span>
+                            }
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("PASSWORDCONFIRM") && ViewData.ModelState["PASSWORDCONFIRM"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["PASSWORDCONFIRM"].Errors[0].ErrorMessage</span>
+                            }
+
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-2 label-info myTips">建议您使用数字与字母的组合</span>-->
+                </div>
+                <!--地址-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel">地址信息:</p>
+                    </div>
+                    <div class="form-group col-md-2 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="country"></label>
+                            @Html.EditorFor(model => model.Item3.COUNTRY, new { htmlAttributes = new { placeholder = "国家", @class = "form-control", style = "height: 40px" } })
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("COUNTRY") && ViewData.ModelState["COUNTRY"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["COUNTRY"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 32px">
+                            <label class="sr-only" for="city"></label>
+                            @Html.EditorFor(model => model.Item3.CITY, new { htmlAttributes = new { placeholder = "城市", @class = "form-control", style = "height: 40px" } })
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("CITY") && ViewData.ModelState["CITY"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["CITY"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 64px">
+                            <label class="sr-only" for="block"></label>
+                            @Html.EditorFor(model => model.Item3.DISTRICT, new { htmlAttributes = new { placeholder = "区(县)", @class = "form-control", style = "height: 40px" } })
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("DISTRICT") && ViewData.ModelState["DISTRICT"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["DISTRICT"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">您的地址信息</span>-->
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel">详细地址:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="detailAddress"></label>
+                            @Html.EditorFor(model => model.Item3.DETAIL_ADDRESS, new { htmlAttributes = new { placeholder = "例如同济大学嘉定校区6号楼233", @class = "form-control", style = "height: 40px" } })
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("ADDRESS") && ViewData.ModelState["ADDRESS"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["ADDRESS"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">例如同济大学嘉定校区6号楼233</span>-->
+                </div>
+                <!--邮箱-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel">邮箱:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="email"></label>
+                            @Html.EditorFor(model => model.Item4.CUSTOMER_EMAIL, new { htmlAttributes = new { placeholder = "您的邮箱", @class = "form-control", style = "height: 40px" } })
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("EMAIL") && ViewData.ModelState["EMAIL"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["EMAIL"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">例如同济大学嘉定校区6号楼</span>-->
+                </div>
+                <!--手机-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel">手机:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="phoneNum"></label>
+
+                            @Html.EditorFor(model => model.Item1.USER_TEL, new { htmlAttributes = new {placeholder = "您的手机号码", @class = "form-control", style = "height: 40px" }})
+
+                            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ContainsKey("TEL") && ViewData.ModelState["TEL"].Errors.Count() > 0)
+                            {
+                                <span style="color:red">@ViewData.ModelState["TEL"].Errors[0].ErrorMessage</span>
+                            }
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">我们承若不会泄露您的个人信息</span>-->
+                </div>
+                <button class="col-md-9 col-md-offset-2 btn-lg btn-info" style="margin-top: 30px" id="hrefBtn">注册</button>
+            }
+        </div>
+    </div>

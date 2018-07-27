@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="mainPageStytle.css">
+    <script src="mainPageJs.js"></script>
+    <title>Main</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="mainPageNav">
+        <div class="container-fluid">
+            <div class="col-md-1"></div>
+            <div class="navbar-header col-md-3">
+                <img src="Logo_lg.png" class="navLogo">
+            </div>
+            <div class="col-md-3" style="height: 88px"></div>
+            <ul class="nav navbar-nav" style="margin-top: 20px;">
+                <li><a href="#">首页</a></li>
+                <li><a href="loginPage/loginPage.html">登陆</a></li>
+                <li><a href="eqptPage/eqptPage.html">器材组凭</a></li>
+                <li><a href="#">图片服务</a></li>
+                <li><a href="AboutUsPage/AboutUsPage.html">关于我们</a></li>
+                <div class="page-header"></div>
+            </ul>
+        </div>
+    </nav>
+    <!--欢迎界面轮播图-->
+    <div class="container-fluid" style="padding: 0px; height: 100%; max-height: 100%">
+        <div id="topSlide" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item" style="position: relative">
+                    <img class="topSlideImg" alt="" src="timg.jpg">
+                    <!--<div class="carousel-caption" style="border: #5bc0de 5px solid; position: absolute; top: 100px; height: 100px">-->
+                        <!--<h2>-->
+                            <!--KEA天下第一-->
+                        <!--</h2>-->
+                    <!--</div>-->
+                    <div style="height: 100px; width: 100px; position: absolute; left: 10px; top: 10px; border: #5bc0de 10px solid"></div>
+                </div>
+                <div class="item">
+                    <img class="topSlideImg" alt="" src="timg%20(1).jpg">
+                </div>
+                <div class="item active">
+                    <img class="topSlideImg" alt="" src="timg%20(2).jpg">
+                </div>
+            </div>
+            <a class="left carousel-control" data-slide="prev" href="#topSlide"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" data-slide="next" href="#topSlide"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+    <!--器材种类选择ver1-->
+    <div class="container-fluid" style="margin-top: 35px" id="eqptShow">
+        <div class="row">
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="eqptPic\testPic1.png" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">摄像机</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="eqptPic\testPic2.png" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">单反</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="eqptPic\testPic3.png" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">镜头</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="罗1.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">航拍飞机</p>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="罗1.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">三脚架</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="罗1.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">摇臂</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="罗1.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">灯光设备</p>
+                </a>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+                <a href="#">
+                    <img src="罗1.jpg" class="eqptPic img-circle">
+                    <p style="font-size: 24px; margin-top: 20px">其他</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--&lt;!&ndash;器材种类选择ver2&ndash;&gt;-->
+    <!--<ul class="nav nav-tabs" role="tablist" id="eqptTabs">-->
+        <!--<li role="presentation" class="active col-md-2"><a href="#type1" role="tab" data-toggle="tab">摄像机</a></li>-->
+        <!--<li role="presentation" class="col-md-2"><a href="#type2" role="tab" data-toggle="tab">单反</a></li>-->
+        <!--<li role="presentation" class="col-md-2"><a href="#type3" role="tab" data-toggle="tab">镜头</a></li>-->
+        <!--<li role="presentation" class="col-md-2"><a href="#type4" role="tab" data-toggle="tab">航拍飞机</a></li>-->
+        <!--<li role="presentation" class="col-md-2"><a href="#type5" role="tab" data-toggle="tab">三脚架</a></li>-->
+        <!--<li role="presentation" class="col-md-2"><a href="#type6" role="tab" data-toggle="tab">灯光设备</a></li>-->
+    <!--</ul>-->
+    <!--<div class="tab-content" id="eqptTabContent">-->
+        <!--<div role="tabpanel" class="tab-pane active" id="type1">-->
+            <!--<div class="container-fluid">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="thumbnail">-->
+                            <!--<img src="罗1.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>800包夜哦</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="thumbnail">-->
+                            <!--<img src="罗2.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>700包夜哦</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="thumbnail">-->
+                            <!--<img src="罗3.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>600包夜哦</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="thumbnail">-->
+                            <!--<img src="罗4.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>500包夜哦</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="row">-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="thumbnail">-->
+                            <!--<img src="罗5.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>400包夜哦</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="thumbnail">-->
+                            <!--<img src="罗6.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>300包夜哦</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div class="thumbnail">-->
+                            <!--<img src="罗7.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>200包夜哦</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3">-->
+                        <!--<div href="罗1.jpg" class="thumbnail">-->
+                            <!--<img src="罗1.jpg" class="eqptPic">-->
+                            <!--<div class="caption">-->
+                                <!--<h2>求你了，白嫖也行</h2>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<ul class="pagination">-->
+                    <!--<li><a href="#">&laquo;</a></li>-->
+                    <!--<li><a href="#">1</a></li>-->
+                    <!--<li><a href="#">2</a></li>-->
+                    <!--<li><a href="#">3</a></li>-->
+                    <!--<li><a href="#">4</a></li>-->
+                    <!--<li><a href="#">5</a></li>-->
+                    <!--<li><a href="#">&raquo;</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="type2">单反图片</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="type3">镜头图片</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="type4">航拍飞机</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="type5">三脚架</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="type6">灯光设备</div>-->
+    <!--</div>-->
+    <!--热门器材轮播图-->
+    <div class="container-fluid" style="width: 100%; height: 50%;">
+        <h2 style="text-align: center">热租器材</h2>
+        <div id="hotEqptSlide" class="carousel slide" style="width: 100%; height: 100%">
+            <div class="carousel-inner" style="width: 100%; height: 100%;">
+                <div class="item">
+                    <img class="hotEqptImg" alt="" src="timg.jpg">
+                </div>
+                <div class="item">
+                    <img class="hotEqptImg" alt="" src="timg%20(1).jpg">
+                </div>
+                <div class="item active">
+                    <img class="hotEqptImg" alt="" src="timg%20(2).jpg">
+                </div>
+            </div>
+            <a class="left carousel-control" data-slide="prev" href="#hotEqptSlide"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" data-slide="next" href="#hotEqptSlide"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+    <!--画廊-->
+    <div class="container-fluid" id="gallery" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <h2 class="col-md-4" style="text-align: center">
+                画廊展示
+            </h2>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗1.jpg" class="testPic"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗2.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗3.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗4.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗1.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗2.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗3.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗4.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗1.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗2.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗3.jpg"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail galPic">
+                    <div class="picWrap"><img src="罗4.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--文字测试-->
+    <p style="margin-top: 90px">
+        故事背景
+        克洛斯贝尔自治州，因历史原因，这个被埃雷波尼亚帝国和卡尔瓦德共和国夹在中间的自治州，以大陆上数一数二的贸易和金融都市为地位发展起来的区域，因某个狂热宗教团体引起的事件经历了一次危机。黑帮集团之间的对抗，谜之药物“真知”（Gnosis）事件，这一系列的事件因“特别任务支援科（SSS）”的活跃而得以平安化解，自治州再次迎来和平。【零之轨迹剧情】
+        在将与教团和黑帮有牵连的帝国派和共和国派议员一扫而空后，迎来新市长的克洛斯贝尔前途一片光明。但是，这对于即将迎来激荡时代的塞姆利亚大陆来说，只不过是片刻的休息罢了。
+    </p>
+    <p style="margin-top: 50px">
+        碧之轨迹》的舞台同样位于表面繁荣但暗潮汹涌的魔都克洛斯贝尔，时间接续在前作5个月后。当时以罗伊德、艾莉、缇欧、兰迪一行人为核心组成的特殊警察部门“特别任务支援科”，虽然成功解决零之轨迹中的重大事件，却也因为克洛斯贝尔复兴任务紧迫，必须解散，成员因此暂时各奔东西。
+        然而克洛斯贝尔仍有许多问题悬而未解——
+        依然强大的黑道组织，仍在台面下翻弄社会情势。
+        拥有国家级武力的特级猎兵团“赤色星座”赫然进驻，为巨额报酬接手神秘委托。
+        埃雷波尼亚帝国和卡尔瓦德共和国，两大强权与克洛斯贝尔的领土争端依然存在，宛若导火线一触即发。
+        仅仅展现冰山一角就显露超强实力的神秘结社“噬身之蛇”，始终对克洛斯贝尔某项事物抱持高度兴趣。
+        隶属七耀教会的“星杯骑士团”，暗中协助主角一行人与众多黑暗势力对抗。
+        众多势力集结魔都，凝聚足以颠覆大陆情势的混乱能量。相对当前的混乱情势，罗伊德之兄盖伊的死亡疑团对世人而言，显得如此微不足道。但这起似乎要被淡忘的小小事件，其影响力才正要发酵。
+        在超越人智的因果律牵引下，新生的“克洛斯贝尔特殊任务支援科”，再次画出新的历史轨迹。
+        这是讲述 “期望在同一时代生存下去” 的故事
+        以此送给想要“跨越壁障”的所有人。
+    </p>
+    <p style="margin-top: 90px">
+        背景设定
+        克洛斯贝尔自治州（Crossbell State）位于赛姆里亚大陆西部的自治州。地处大陆西部，位于埃雷波尼亚帝国、利贝尔王国和卡尔瓦德共和国中间，70年前成为一个拥有自治主权的独立地区，不从属与任何国家，有独立的一套政治系统。 市长和议会议长共同拥有行政权，是一个权力分散的民主政治体系。
+        自治州首府是克洛斯贝尔市，西部和以贝尔加德门为界，与埃雷波尼亚帝国毗邻。东部以唐古拉姆门为界和卡尔瓦德共和国相连。在首府周边有两个村庄，分别是东北部以蜂蜜为特产的阿尔摩利卡村和西北部以七耀石为特产的矿山镇玛因兹，在南部有在雷米菲利亚公国支持下建立起来的圣乌尔斯拉医科大学，在东南部有修养胜地米修拉姆及主题公园。
+        由于地理位置及特殊的政治制度，使得克洛斯贝尔自治州成为大陆数一数二的经济贸易中心。
+        近几年，虽然由于埃雷波尼亚帝国与卡尔瓦德共和国两大国的大规模军事演习等行动令空气变得十分紧张，但随着“互不侵犯条约”在利贝尔的签订，这种紧张状态被大幅度缓和了。其结果是大量资金、人力、情报从大陆全境流向此地，高楼大厦、导力车和导力网络等崭新设施也被接连导入。
+        在没有军队的自治州中，克洛斯贝尔警察主要负责守卫都市的治安维持组织。他们露骨地受到来自帝国和共和国派议员的压力，不仅要面对各种各样的贪污事件，而且也无力处理与议员有所关联的黑手党组织的暗中猖獗以及国外势力的活动。因此失去了市民的信赖，人气也被游击士协会所夺走。在这种情况下，为了从市民中取回人气，特别任务支援科成立了。
+        特别任务支援科是罗伊德一行被分配至的、警察局内新成立的弱小部门。为了在市民评价中与游击士进行对峙，支援科的职责为处理来自各地的，有关各方面的委托·请求，在警察局内部被当成“下下签”、“模仿游击士的猴戏”。因此自愿加入的人一个也没有，成员全部都是情况特殊的新人。
+    </p>
+    <p style="margin-top: 50px">
+        出身于克洛斯贝尔的年轻人罗伊德·班宁斯从警察学校取得搜查官资格后接到了克洛斯贝尔警察局的通知，成为警察局下属“特别任务支援科”的一员，并结识了3个伙伴——来自列曼自治州、不善于表达情感的缇欧·普拉托，射术一流、交际能力强的艾莉·麦克道尔和原属于贝尔加德门警备队（猎兵组织“赤色星座”）的兰迪·奥兰多。
+        原来特别任务支援科是警察局的一个特殊部门，由赛尔盖组建，游离于其他部门之外，经常遭到挖苦和讽刺。接受市民的委托，为市民服务。由于克洛斯贝尔特殊的政治因素，警方办案经常受到重重阻力，因而在市民心中形象不佳，市民往往更倾向于向以服务人民和保护人民为宗旨的游击士协会寻求帮助。因此赛尔盖在过逝的下属盖伊·班宁斯（主角罗伊德·班宁斯的哥哥，在故事开始的一次执行任务中牺牲）的建议下成立了特别任务支援科，希望挽回警方的形象。
+        赛尔盖委派四人对克洛斯贝尔下水道中的魔兽进行清理，作为对四人能力的考验。清理过程中，罗伊德等意外救下了误闯入下水道的两个少年，但是却被魔兽攻击，幸而得到克洛斯贝尔最强的游击士，人称“风之剑圣”的亚里欧斯·马克莱因帮助而脱险。
+        克洛斯贝尔市东南隅有一片旧市街，龙蛇混杂，盘踞着以身材高大、暴躁好斗的瓦鲁多·瓦雷斯为首的“剑蛇帮”和以样貌俊美但是身手不凡的瓦吉·赫米斯菲亚为首的“圣书会”两个不良集团。两个集团都声称对方袭击了自己的成员，从而扬言要进行报复。为了防止火拼，罗伊德一行人前去调查，结果发觉这一切都是克洛斯贝尔市的黑手党“鲁巴彻商会”从中作梗。鲁巴彻商会接到通告，有一个来自卡尔瓦德共和国的黑社会组织“黑月”已经来到克洛斯贝尔，为了保护自己的利益，从而希望挑起两个不良集团的火拼，在双方两败俱伤后加以收编以增强自己的战斗力。罗伊德挫败了黑手党的阴谋，但是同时也渐渐发觉克洛斯贝尔表面繁荣不过是空中楼阁。
+    </p>
+    <p style="margin-top: 50px">
+        矿山镇玛因兹的镇长向特别任务支援科求助，说一名矿工冈兹失踪数日。罗伊德一行人查访之下发觉这个赌术运气一向不佳的矿工居然一夜之间赌术突飞猛进，赢了一大笔钱后在克洛斯贝尔花天酒地。众人劝说无果。同时克洛斯贝尔又有多起奇怪事件发生，事件主角均是一夜之间能力猛增。
+        黑月在克洛斯贝尔的驻地受到了鲁巴彻商会的袭击而损失惨重。罗伊德一行人向黑月的负责人曹·李询问，发觉出动的居然仅仅是鲁巴彻一般的小喽啰，但是个个战斗力奇高，可以单手持重型机枪。
+        罗伊德深感疑惑，而此时玛因兹镇镇长打来电话，称冈兹和人对赌，期间火药味十足。罗伊德一行人赶到赌场，冈兹赌输，一怒之下意欲发作，罗伊德等人制服冈茨过程中发觉冈兹膂力奇大。
+        冈兹猛烈反抗，在搏斗中力尽昏厥。罗伊德一行人在其包裹中搜出神秘蓝色药片。罗伊德等人感觉一系列事件似乎都有共同点。为了查清药物成分，一行人向圣乌尔丝拉医科大学求助，兼任药学负责人的约亚西姆向一行人陈述了一段往事，称这种药丸似乎很像数年前被剿灭的邪教“D∴G”教团使用的药物真之睿智（真知）。
+        缇欧突然昏倒在了医科大学门口，塞茜尔将其安置在自己房间中，罗伊德等人从醒来的缇欧口中了解到，她曾经被教团掳走，充当真之睿智（真知）开发的活体实验样本。原来多年前在大陆西部各地都发生的儿童失踪事件，正是教团为了开发真之睿智（真知）而将儿童作为活体实验对象。由于失踪儿童数量巨大，影响恶劣，终于在各地警方和游击士联合打击下，教团在各地的实验据点都被剿灭，教团成员或自行了断，或神经错乱。缇欧在奄奄一息时被罗伊德的哥哥盖伊·班宁斯救出，而同一据点其他儿童都因身不能受而早早夭折。
+        回到特别任务支援科总部，赛尔盖向罗伊德一行人道出，原来当年他正是统帅盖伊·班宁斯和亚里欧斯·马克莱因两名警界新人的队长，执行了剿灭教团据点的人物。
+        罗伊德前往鲁巴彻总部调查，遇到了搜查一课的达德利，几人发觉偌大的黑手党总部居然空无一人，在突破重重机关后，几人来到了会长室，找到了黑手党贩卖真之睿智（真知）的证据，罗伊德更是发现了哥哥曾经佩戴的警徽。罗伊德深感事态严重，建议向游击士协会寻求合作，达德利虽然不甘，但是顾全大局依然答应。
+    </p>
+    <p style="margin-top: 50px">
+        罗伊德等人欲再前往医科大学探寻蓝色药丸的成分，达德利告诉罗伊德，阿奈斯特在被捕后陷入了神智错乱，而约亚西姆一直是其主治医生，几人遂开始怀疑约亚西姆。
+        一行人来到医院，发觉医院被受到操控的黑手党喽啰、军犬和魔兽占据，一行人突破阻碍来到研究楼，发觉约亚西姆已经不在，而阿奈斯特则挥舞长剑指向众人。众人击倒阿奈斯特，却被他逃走。
+        众人回到克洛斯贝尔，发觉游击士协会遇到了袭击，正在疑惑之际，特务支援科总部突然遭袭，闯进来的居然是贝尔加德门的警备队。一行人保护着琪雅和小滴来到市外，被黑手党和警备队包围。此时IBC总裁迪塔驾车前来，众人坐上迪塔的防弹轿车逃向IBC总部。
+        警备队试图动用军用炸弹强行炸开IBC的大门，罗伊德一行人开门迎战，但是寡不敌众。正在千钧一发之际，亚里欧斯赶到，击溃守备军，并且擒拿住守备军的指挥。原来一切都是约亚西姆所为，他利用真之睿智（真知）控制了黑手党和贝尔加德门的警备队，目的是要求罗伊德等人交出琪雅。
+        游击士协会查到了约亚西姆的老巢，居然在古战场深处的太阳堡垒。罗伊德4人协同艾丝蒂尔和约修亚，六人赶到太阳堡垒最底层的地底湖，见到了约亚西姆。
+        约亚西姆向众人道出实情，原来他是教团的高级祭司，是教团在各地实验据点的总负责，同时也是真之睿智（真知）研发的负责人。教团否认空之女神的存在，开发一种可以激发人潜力甚至提升运气的药物真之睿智（真知），为此在各地运用诸多手段绑架拐走儿童作为实验对象，搜集人体在受到威胁和刺激时激发是的人体潜能作为药物开发的是数据。由于影响过大，终于在各地警方和游击士联合打击下被剿灭。各据点均被剿灭，约亚西姆潜藏了下来，搜集了所有的实验数据。由于教团曾经建立过一个称为“乐园”的据点，依次笼络各地权贵，试图抓住他们的把柄加以利用。克洛斯贝尔的哈尔特曼议长因此受到约亚西姆要挟，帮他在克洛斯贝尔藏匿起来并建立其秘密研发中心，同时提供大量资金设备供其研发和生产真之睿智（真知）。之所以选择克洛斯贝尔，据约亚西姆称，是因为此处是“圣地”，原因却没有说明。
+        而琪雅则是从中世纪炼金术师时代开始，就一直存在并且沉睡了500年的神子，是教团所崇拜的“大人”，琪雅从沉睡中苏醒，因为不明原因而被掉包入装人偶的皮箱，从而被罗伊德等人找到。
+        罗伊德等人怒斥约亚西姆，并将其击倒。约亚西姆施展伪魔眼，禁锢一行人，但是被罗伊德用计化解。恼羞成怒的约亚西姆吞服下一整瓶真知完成品，变异为强大的魔人。魔人化的约亚西姆不但伤害力惊人，而且自我修复能力极强，最终在歼灭天使·玲的帮助下，罗伊德等彻底打败了约亚西姆
+    </p>
+    <!--<img class="myImg" src="罗1.jpg">-->
+    <!--<nav class="navbar navbar-default navbar-inverse">-->
+        <!--<div class="container">-->
+            <!--<div class="navbar-header">-->
+                <!--Test-->
+            <!--</div>-->
+            <!--<div class="collapse navbar-collapse">-->
+                <!--<ul class="nav navbar-nav">-->
+                    <!--<li><a href="#">Test1</a></li>-->
+                    <!--<li><a href="#">test2</a></li>-->
+                    <!--<li><a href="#">test3</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</nav>-->
+    <!--<div class="container" id="myTest">TEST</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-4">-->
+            <!--<a href="罗1.jpg">罗1</a>-->
+        <!--</div>-->
+        <!--<div class="col-md-4">-->
+            <!--<a href="罗2.jpg">罗2</a>-->
+        <!--</div>-->
+        <!--<div class="col-md-4">-->
+            <!--<a href="罗3.jpg">罗3</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<table class="table table-bordered table-hover">-->
+        <!--<tr class="table text-center">-->
+            <!--<td>1</td>-->
+            <!--<td>1</td>-->
+            <!--<td>1</td>-->
+        <!--</tr>-->
+        <!--<tr class="table text-center">-->
+            <!--<td>1</td>-->
+            <!--<td>1</td>-->
+            <!--<td>1</td>-->
+        <!--</tr>-->
+        <!--<tr class="table text-center">-->
+            <!--<td>1</td>-->
+            <!--<td>1</td>-->
+            <!--<td>1</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+    <!--<ul class="nav nav-pills">-->
+        <!--<li><a href="#">学习</a></li>-->
+        <!--<li><a href="#">生活</a></li>-->
+        <!--<li><a href="#">鬼畜</a></li>-->
+    <!--</ul>-->
+    <!--<div class="dropdown">-->
+        <!--<button type="button" class="btn btn-default" data-toggle="dropdown">-->
+            <!--test<span class="caret"></span>-->
+        <!--</button>-->
+        <!--<ul class="dropdown-menu">-->
+            <!--<li>test1</li>-->
+            <!--<li>test2</li>-->
+            <!--<li>test3</li>-->
+            <!--<li>test4</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<form>-->
+        <!--<div class="form-group col-md-5 pull-right">-->
+            <!--<div class="input-group col-md-4">-->
+                <!--<label class="input-group-addon" for="test"><span class="glyphicon glyphicon-user"></span></label>-->
+                <!--<input type="text" id="test" class="form-control">-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</form>-->
+</body>
+</html>

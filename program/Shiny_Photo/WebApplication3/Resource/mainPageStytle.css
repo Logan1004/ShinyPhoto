@@ -1,0 +1,67 @@
+/*设备展示*/
+#eqptShow a{
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+}
+#eqptShow a:hover{
+    transition: 500ms;
+    color: #5bc0de;
+}
+#eqptTabs{
+    margin-top: 20px;
+}
+#eqptTabs  li a{
+    text-align: center;
+    font-size: 24px;
+}
+#eqptTabContent{
+    text-align: center;
+    border: black 1px solid;
+}
+.eqptPic{
+    border: #9d9d9d 1px solid;
+    width: 100%;
+    height: 350px;
+    color: #9d9d9d;
+    background-color: #9d9d9d;
+}
+.eqptPic:hover{
+    transition: 500ms;
+    box-shadow: 2px 4px 6px #000;
+}
+/*热门器材轮播*/
+.hotEqptImg{
+    width: 100%;
+    height: 100%;
+}
+/*画廊部分*/
+#gallery{
+    margin-top: 50px;
+    border: black 1px solid;
+}
+.picWrap{
+    overflow: hidden;
+    width: 100%;
+}
+.picWrap img{
+    width: 100%;
+    height: auto;
+}
+.galPic{
+    overflow: hidden;
+    transition: 1200ms;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    overflow: hidden;
+}
+#gallery .galPic:hover{
+    box-shadow: 2px 4px 6px #000;
+    transition: 1000ms;
+}
+#gallery .galPic img:hover{
+    transform: scale(1.1);
+    transition: 1000ms;
+}
+

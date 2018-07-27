@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateOrder</title>
+    <link rel="stylesheet" type="text/css" href="../../Resource/loginPage/css/loginPageStyle.css">
+</head>
+<body>
+    <div>
+    </div>
+
+    <h2>
+        We have received your order.
+    </h2>
+    <h3>
+        Thanks for choosing us!
+    </h3>
+    <h3>
+        Your picture:
+    </h3>
+    <img src=@ViewData["PicturePath"] />
+    <br />
+    Your Photo ID: 
+    <br />
+    @TempData["PictureName"]
+    <br />
+    Input your demands here:
+    <br />
+    <form method="post" action="../Pic/Order">
+        <input type="text" name="dem" />
+        <input type="submit" />
+    </form>
+    
+</body>
+</html>
+
+
+

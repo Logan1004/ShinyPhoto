@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../jquery.cookie.js"></script>
+    <script src="../bootstrap.min.js"></script>
+    <script src="../publicJs.js"></script>
+    <script src="js/picServicePageJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/picServicePageStyle.css">
+    <title>picService</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation" id="mainPageNav">
+    <div class="container-fluid">
+        <div class="navbar-header col-md-3">
+            <div class="navbar-header col-md-3">
+                <img src="../publicImg/Title.png" class="navLogo" id="myLogo">
+            </div>
+        </div>
+        <div class="col-md-3" style="height: 88px"></div>
+        <ul class="nav navbar-nav" style="margin-top: 20px;">
+            <li><a href="../mainPage.html">首页</a></li>
+            <li><a href="../eqptPage/eqptPage.html?curPage=1">器材租凭</a></li>
+            <li><a href="../picPage/picPage.html">图片服务</a></li>
+            <li><a href="../AboutUsPage/AboutUsPage.html">关于我们</a></li>
+            <li><a href=../loginPage/loginPage.html>登录</a></li>
+            <div class="page-header"></div>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container-fluid" style="padding: 0px; height: 40%; max-height: 100%">
+        <div class="carousel-inner">
+            <img class="topSlideImg" alt="" src="../publicImg/HeadPhoto_1.jpg">
+        </div>
+    </div>
+
+    <!--修图服务-->
+    <div class="container-fluid" style="margin-top: 50px">
+        <div class="wrap col-md-4 col-md-offset-4" style="border: black 1px solid; height:  400px;">
+            <!--需要放的图片-->
+            <img src="">
+        </div>
+    </div>
+    <div class="input-group col-lg-offset-4">
+        <lable class="input-group-addon sr-only"></lable>
+        <input class="control-form"  type="text" placeholder="请在这里输入您的修图需求" style="width: 505px; left: 5px; height: 80px; position: relative; margin-top: 30px; font-size: 24px">
+    </div>
+    <div class="row" style="text-align: center">
+        <button class="btn-lg btn-info" style="width: 200px; margin-top: 20px">确认提交</button>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="newContainer">
+            <div class="footer-text">
+                <p>Contact US @1585084146@qq.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

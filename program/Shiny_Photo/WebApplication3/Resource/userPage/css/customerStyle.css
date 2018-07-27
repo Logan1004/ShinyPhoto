@@ -1,0 +1,76 @@
+#customerTab{
+    background-color: white;
+    margin-top: 20px;
+    width: 85%;
+}
+#customerTab li a{
+    text-align: center;
+    font-size: 24px;
+    width: 100%;;
+}
+#customerTabContent{
+    background-color: white;
+    width: 85%;
+    height: 550px;
+}
+.userInfo{
+    position: relative;
+    left: 40px;
+    font-size: 20px;
+    top: 5px;
+}
+.inputLabel{
+    position: relative;
+    left: 40px;
+    font-size: 20px;
+    top: 5px;
+}
+#userName{
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    top: -10px;
+    left: -15px;
+    margin-top: 15px;
+}
+#userPhone{
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    top: 0px;
+    left: -15px;
+    margin-top: 15px;
+}
+#userEmail{
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    top: 3px;
+    left: -15px;
+    margin-top: 15px;
+}
+#userbalance{
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    top: 3px;
+    left: -15px;
+    margin-top: 15px;
+}
+.addBorder{
+    border:1px solid #ccc;
+}
+
+#imgDiv{
+    width:100px;
+    height:100px;
+}
+
+#imgContent{
+    width: 100%;
+    height:100%;
+}
+
+#logOut{
+    border-radius: 0px;
+}

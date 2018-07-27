@@ -1,0 +1,112 @@
+html,body{
+    height: 100%;
+}
+/*顶部导航栏*/
+.navLogo{
+    transition: 800ms;
+    height: 120px;
+    width: 240px;
+}
+.navbar .nav > li:hover .dropdown-menu {
+    display: block;
+}
+#mainPageNav{
+    border: 0px;
+    padding: 10px;
+    height: 144px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 800ms;
+}
+#mainPageNav .page-header{
+    border-bottom: 3px solid #eee;
+}
+#mainPageNav ul{
+    transition: 800ms;
+}
+#mainPageNav ul li a{
+    transition: 800ms;
+    font-size: 20px;
+    color: white;
+}
+/*顶部轮播图*/
+#topSlide{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+#topSlide .carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+.topSlideImg{
+    width: 100%;
+    height: 100%;
+}
+/*设备展示*/
+#eqptShow a{
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+}
+#eqptShow a:hover{
+    transition: 500ms;
+    color: #5bc0de;
+}
+#eqptTabs{
+    margin-top: 20px;
+}
+#eqptTabs  li a{
+    text-align: center;
+    font-size: 24px;
+}
+#eqptTabContent{
+    text-align: center;
+    border: black 1px solid;
+}
+.eqptPic{
+    border: #9d9d9d 1px solid;
+    width: 100%;
+    height: 350px;
+    color: #9d9d9d;
+    background-color: #9d9d9d;
+}
+.eqptPic:hover{
+    transition: 500ms;
+    box-shadow: 2px 4px 6px #000;
+}
+/*热门器材轮播*/
+.hotEqptImg{
+    width: 100%;
+    height: 100%;
+}
+/*画廊部分*/
+#gallery{
+    margin-top: 50px;
+    border: black 1px solid;
+}
+.picWrap{
+    overflow: hidden;
+    width: 100%;
+}
+.picWrap img{
+    width: 100%;
+    height: auto;
+}
+.galPic{
+    overflow: hidden;
+    transition: 1200ms;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    overflow: hidden;
+}
+#gallery .galPic:hover{
+    box-shadow: 2px 4px 6px #000;
+    transition: 1000ms;
+}
+#gallery .galPic img:hover{
+    transform: scale(1.1);
+    transition: 1000ms;
+}
+

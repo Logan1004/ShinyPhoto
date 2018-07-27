@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "PicService";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+    <script src="~/Resource/picPage/js/picServicePageJs.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Resource/picPage/picServicePage.html">
+    <title>picService</title>
+    <!--修图服务-->
+    <div class="container">
+        <div c></div>
+    </div>
+
+    <div class="picture_control">
+        <h1>
+            Upload your picture here.
+        </h1>
+
+        @using (Html.BeginForm("CreateOrder", "Pic", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <text>选择上传文件：</text><input name="file" type="file" id="file" />
+            <br />
+            <br />
+            <input type="submit" name="Upload" value="Upload" />
+        }
+    </div>
+
+

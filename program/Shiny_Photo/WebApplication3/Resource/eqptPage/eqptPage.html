@@ -1,0 +1,1185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/jquery-3.3.1.min.js"></script>
+    <script src="../jquery.cookie.js"></script>
+    <script src="../bootstrap.min.js"></script>
+    <script src="../publicJs.js"></script>
+    <script src="js/eqptPageJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/eqptPageStyle.css">
+    <title>equipment</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation" id="mainPageNav">
+        <div class="container-fluid">
+            <div class="navbar-header col-md-3">
+                <div class="navbar-header col-md-3">
+                    <img src="../publicImg/Title.png" class="navLogo" id="myLogo">
+                </div>
+            </div>
+            <div class="col-md-3" style="height: 88px"></div>
+            <ul class="nav navbar-nav" style="margin-top: 20px;">
+                <li><a href="../mainPage.html">首页</a></li>
+                <li><a href="#">器材租凭</a></li>
+                <li><a href="../picPage/picPage.html">图片服务</a></li>
+                <li><a href="../AboutUsPage/AboutUsPage.html">关于我们</a></li>
+                <li><a href="../loginPage/loginPage.html">登录</a></li>
+                <div class="page-header"></div>
+            </ul>
+        </div>
+    </nav>
+
+    <!--欢迎界面轮播图-->
+    <div class="container-fluid" style="padding: 0px; height: 40%; max-height: 100%">
+        <div class="carousel-inner">
+            <img class="topSlideImg" alt="" src="../publicImg/HeadPhoto_1.jpg">
+        </div>
+    </div>
+
+    <!--器材展示-->
+    <ul class="nav nav-tabs" role="tablist" id="eqptTabs">
+        <li role="presentation" class="col-md-2"><a href="#type1" role="tab" data-toggle="tab">摄像机</a></li>
+        <li role="presentation" class="active col-md-2"><a href="#type2" role="tab" data-toggle="tab">单反</a></li>
+        <li role="presentation" class="col-md-2"><a href="#type3" role="tab" data-toggle="tab">镜头</a></li>
+        <li role="presentation" class="col-md-2"><a href="#type4" role="tab" data-toggle="tab">航拍飞机</a></li>
+        <li role="presentation" class="col-md-2"><a href="#type5" role="tab" data-toggle="tab">三脚架</a></li>
+        <li role="presentation" class="col-md-2"><a href="#type6" role="tab" data-toggle="tab">拍立得</a></li>
+        <li role="presentation" class="col-md-2"><a href="#type7" role="tab" data-toggle="tab">其他</a></li>
+    </ul>
+    <div class="tab-content" id="eqptTabContent">
+        <div role="tabpanel" class="tab-pane" id="type1">
+            <div class="container-fluid">
+                <ul class="container" style="width: 100%" id="container1">
+                    <li class="col-md-3">
+                            <div class="thumbnail">
+                                <div class="wrap"><img src="img/Vidicon/7.jpg" class="eqptPic"></div>
+                                <div class="caption" style="border: black 0px solid; padding: 0px">
+                                    <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                        <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                        <a href="eqptBuyPage.html?picUrl=img/Vidicon/7.jpg&price=90.00&name=索尼HDR-CX390E" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                    </div>
+                                    <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                        <a class="col-md-offset-1 col-md-11">索尼HDR-CX390E</a>
+                                    </div>
+                                    <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                        <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                        <div class="col-md-5 numDesc">库存: 21</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    <li class="col-md-3">
+                            <div class="thumbnail">
+                                <div class="wrap"><img src="img/Vidicon/8.jpg" class="eqptPic"></div>
+                                <div class="caption" style="border: black 0px solid; padding: 0px">
+                                    <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                        <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                        <a href="eqptBuyPage.html?picUrl=img/Vidicon/8.jpg&price=90.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                    </div>
+                                    <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                        <a class="col-md-offset-1 col-md-11">索尼HDR-CX650E</a>
+                                    </div>
+                                    <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                        <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                        <div class="col-md-5 numDesc">库存: 20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src="img/Vidicon/25.jpg" class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                    <a href="eqptBuyPage.html?picUrl=img/Vidicon/25.jpg&price=90.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">执法先锋 D800</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                    <div class="col-md-5 numDesc">库存: 19</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src="img/Vidicon/26.jpg" class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                    <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">索尼HDR-CX680</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                    <div class="col-md-5 numDesc">库存: 14</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src="img/Vidicon/27.jpg" class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                    <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">索尼HDR-CX405</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                    <div class="col-md-5 numDesc">库存: 13</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src="img/Vidicon/28.jpg" class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                    <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">欧达 Z20</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                    <div class="col-md-5 numDesc">库存: 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src="img/Vidicon/29.jpg" class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                    <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">欧达 HDV-Z82</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                    <div class="col-md-5 numDesc">库存: 8</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src="img/Vidicon/23.jpg" class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                    <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">GOPRO HERO6 BALCK</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                    <div class="col-md-5 numDesc">库存: 3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src="img/Vidicon/24.jpg" class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">90.00/天</div>
+                                    <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">GOPRO HERO5 SESSION</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                    <div class="col-md-5 numDesc">库存: 9</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pagination" id="pagination1">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+        <div role="tabpanel" class="active tab-pane" id="type2">
+            <ul class="container" style="width: 100%" id="container2">
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/4.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">70.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">尼康D3400</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 8</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/5.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">徕卡 SL</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 12</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/3.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">佳能5D3 Mark 3</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 10</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/9.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">佳能5D MARK 4</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/11.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">佳能 80D</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 11</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/12.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">宾得 K-1</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 8</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/13.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">宾得 K-70</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/14.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">尼康 D7500</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 7</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/13.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">宾得 K-70</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/SLRCamera/14.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">尼康 D7500</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 7</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination2">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="type3">
+            <ul class="container" style="width: 100%" id="container3">
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/CameraLens/6.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">佳能EF 50mm f/1.8</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/CameraLens/31.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">适马 35MM F/1.4 DG HSM</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/CameraLens/32.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">佳能 EF 55MM F/1.4</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/CameraLens/33.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">腾龙 28-75MM F/2.8</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 6</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/CameraLens/34.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">索尼 SONNAR FE 55MM</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 5</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/CameraLens/35.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">佳能 EF 70-200MM</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination3">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="type4">
+            <ul class="container" style="width: 100%" id="container4">
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/UAV/36.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">DJI 大疆 御</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/UAV/37.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">飞莱尔超长续航无人机</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 2</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/UAV/38.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">DJI 大疆 精灵 Phantom 4</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 2</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/UAV/40.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">DJI 大疆 精灵 Phantom 3SE</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                <div class="col-md-5 numDesc">库存: 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/UAV/41.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">DJI 大疆 晓 Spark</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                <div class="col-md-5 numDesc">库存: 5</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/UAV/42.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">特洛航拍无人机</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 2</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/UAV/43.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">80.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">DJI 大疆 悟 Inspire 2</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 6</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination4">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="type5">
+            <ul class="container" style="width: 100%" id="container5">
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/44.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">佳捷洋 JY0508A 三脚架</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 10</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/45.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">思锐 A1005 单反三脚架</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 11</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/45.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">思锐 A1005 单反三脚架</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 11</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/46.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">云腾691 单反三脚架</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 9</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/47.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">索尼 SONNAR FE 55MM</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 5</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/48.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">米泊 701A 三脚架</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 11</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/49.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">伟峰WF717 三脚架</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                <div class="col-md-5 numDesc">库存: 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Tripod/50.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">百诺 KH25N</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                <div class="col-md-5 numDesc">库存: 11</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination5">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="type6">
+            <ul class="container" style="width: 100%" id="container6">
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/51.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">富士 mini 7C</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 18</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/52.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">富士 mini 9</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 15</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/53.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">徕卡 SOFORT</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 13</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/54.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">富士 mini25</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 22</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/55.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">宝丽来</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 15</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/56.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">富士 SQ 10</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                <div class="col-md-5 numDesc">库存: 14</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/59.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">富士 Wide 300</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">上海</div>
+                                <div class="col-md-5 numDesc">库存: 12</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Polaroid/60.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">柯达 minishot</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">北京</div>
+                                <div class="col-md-5 numDesc">库存: 20</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination6">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="type7">
+            <ul class="container" style="width: 100%" id="container7">
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/61.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">20.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">卓美 圆形渐变镜</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 33</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/62.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">20.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">耐司 MC CPL镀膜偏振镜</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 21</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/63.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">20.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">华为蓝牙遥控自拍杆</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">广州</div>
+                                <div class="col-md-5 numDesc">库存: 35</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/64.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">20.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">小米 支架式自拍杆</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 44</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/65.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">20.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">luedle自拍杆</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 30</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/66.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">800.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">唯卓 单反摄影摇臂</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 15</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/67.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">50.00/天</div>
+                                <a href="eqptBuyPage.html?picUrl=img/eqpt1.png&price=80.00" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">威慑仕 轨道三角车</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 30</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/68.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">800.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">米泊 MYB501</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 11</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/69.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">1000.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">智云 Crane 云鹤单反稳定器</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/70.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">1000.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">魔爪 moza Air 单反手持稳定器</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 2</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src="img/Other/71.jpg" class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">1000.00/天</div>
+                                <a href="eqptBuyPage.html?test=img/eqpt2.png" class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">DJI 大疆 如影RONIN</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">贵州</div>
+                                <div class="col-md-5 numDesc">库存: 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination7">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <div class="newContainer">
+            <div class="footer-text">
+                <p>Contact US @1585084146@qq.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

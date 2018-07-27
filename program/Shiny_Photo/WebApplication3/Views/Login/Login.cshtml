@@ -1,0 +1,122 @@
+﻿
+@model WebApplication3.Models.ALL_LOGIN_INFO
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../Resource/jquery-3.3.1.min.js"></script>
+    <script src="../../Resource/jquery.cookie.js"></script>
+    <script src="../../Resource/bootstrap.min.js"></script>
+    <script src="../../Resource/publicJs.js"></script>
+    <script src="../../Resource/loginPage/js/loginPageJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../Resource/publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="../../Resource/loginPage/css/loginPageStyle.css">
+    <title>Login</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation" id="mainPageNav">
+        <div class="container-fluid">
+            <div class="col-md-1"></div>
+            <div class="navbar-header col-md-3">
+                <div class="navbar-header col-md-3">
+                    <img src="../../Resource/publicImg/NonBG_Logo.png" class="navLogo" id="myLogo">
+                </div>
+            </div>
+            <div class="col-md-3" style="height: 88px"></div>
+            <ul class="nav navbar-nav" style="margin-top: 20px;">
+                <li><a href="../Home/Index">首页</a></li>
+                <li><a href="../Eqpt/EqptPage">器材租凭</a></li>
+                <li><a href="../Pic/PicPage">图片服务</a></li>
+                <li><a href="../AboutUs/AboutUs">关于我们</a></li>
+                <li>
+                    @if (!string.IsNullOrEmpty(HttpContext.Current.Request["loginState"]))
+                    {
+                        <a href="../Home/UserInfo">@HttpContext.Current.Request["loginState"]</a>
+                    }
+                    else
+                    {
+                        <a href="../Login/Login">登录</a>
+                    }
+
+
+                </li>
+                <div class="page-header"></div>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="padding: 0px; height: 40%; max-height: 100%">
+        <div class="carousel-inner">
+            <img class="topSlideImg" alt="" src="../../Resource/loginPage/img/BGPhoto_2.jpg">
+        </div>
+    </div>
+
+    <!--登陆-->
+    <div class="container-fluid" style="margin-top: 50px">
+        <div class="col-md-6" id="leftContent">
+
+        </div>
+        <div class="col-md-5" id="loginBorder">
+            @using (Html.BeginForm("Login", "Login", @FormMethod.Post, new
+            {
+                id = "mainForm",
+                name = "mainForm",
+                style = "margin-top: 20px"
+            }))
+            {
+                <div class="row" style="margin-top: 50px">
+                    <div class="form-group col-md-10 col-md-offset-1">
+                        <div class="input-group">
+                            <label class="input-group-addon" for="test1" style="height: 50px"><span class="glyphicon glyphicon-user" style="width: 30px"></span></label>
+                            @Html.EditorFor(model => model.USER_LOGIN_NAME , "string",new { htmlAttributes = new
+                            {
+                                @class = "form-control",
+                                @style = "height: 50px",
+                                placeholder = "您的账号"
+                            }
+                       })
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 25px">
+                    <div class="form-group col-md-10 col-md-offset-1">
+                        <div class="input-group">
+                            <label class="input-group-addon" for="test2" style="height: 50px"><span class="glyphicon glyphicon-lock" style="width: 30px"></span></label>
+
+                            @Html.EditorFor(model => model.USER_PASSWORD , "string",new { htmlAttributes = new
+                            {
+                                @class = "form-control",
+                                @style = "height: 50px",
+                                placeholder = "你的密码",
+                                type = "Password"
+                            }
+                            })
+
+                        </div>
+                    </div>
+                </div>
+                if (!ViewData.ModelState.IsValid)
+                {
+                    <p style="Color:red; position:relative;left:50px">账号或密码错误</p>
+                }
+                <p>
+                    <input type="submit" value="登录" class="col-md-4 col-md-offset-1 btn-lg btn-info" role="form" style="margin-top: 45px" />
+                    <a href="../Login/Register" class="col-md-4 col-md-offset-2 btn-lg btn-info" type="button" style="margin-top: 45px;" role="button" id="hrefBtn">注册</a>
+                </p>
+
+            }
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+

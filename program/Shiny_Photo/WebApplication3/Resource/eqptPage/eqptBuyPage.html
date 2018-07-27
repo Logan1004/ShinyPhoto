@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="~/jquery-3.3.1.min.js"></script>
+    <script src="~/jquery.cookie.js"></script>
+    <script src="~/bootstrap.min.js"></script>
+    <script src="~/publicJs.js"></script>
+    <script src="../../Resource/eqptPage/js/eqptBuyPageJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/eqptBuyPageStyle.css">
+    <title>Buy</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation" id="mainPageNav">
+    <div class="container-fluid">
+        <div class="col-md-1"></div>
+        <div class="navbar-header col-md-3">
+            <div class="navbar-header col-md-3">
+                <img src="../publicImg/Logo_lg.png" class="navLogo" id="myLogo">
+            </div>
+        </div>
+        <div class="col-md-3" style="height: 88px"></div>
+        <ul class="nav navbar-nav" style="margin-top: 20px;">
+            <li><a href="../mainPage.html">首页</a></li>
+            <li><a href="../eqptPage/eqptPage.html?curPage=1">器材租凭</a></li>
+            <li><a href="../picPage/picPage.html">图片服务</a></li>
+            <li><a href="../AboutUsPage/AboutUsPage.html">关于我们</a></li>
+            <li><a href="../loginPage/loginPage.html">登录</a></li>
+            <div class="page-header"></div>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container-fluid" style="padding: 0px; height: 40%; max-height: 100%">
+        <div class="carousel-inner">
+            <img class="topSlideImg" alt="" src="../publicImg/HeadPhoto_1.jpg">
+        </div>
+    </div>
+
+    <!--购买界面-->
+    <div class="container" style="border: black 0px  solid; width: 90%; padding: 0px; margin-top: 30px;">
+        <div class="eqptPic col-md-6" style="padding: 0px">
+            <div class="wrap">
+                <img src="" style="width: 100%; height: 100%">
+            </div>
+        </div>
+        <div class="eqptPic col-md-6" style=" border: gainsboro 1px solid; box-shadow: 2px 2px 3px gainsboro; height: 400px; left: 10px; background-color: white">
+            <div class="row" style="border: black 0px solid; height: 50px; margin-top: 35px">
+                <div class="col-md-4 col-md-offset-1 priceInfo" style="border: black 0px solid; height: 40px">null/天</div>
+            </div>
+            <div class="row" style="border: black 0px solid; height: 40px; margin-top: 20px">
+                <div class="col-md-offset-1 col-md-8 typeInfo"></div>
+            </div>
+            <form class="row" style="border: black 0px solid; height: 40px; margin-top: 35px">
+                <div class="col-md-2 col-md-offset-1" style="padding: 0px;">
+                    <p class="inputLabel" >送货地址:</p>
+                </div>
+                <div class="form-group col-md-7" style="padding: 0px">
+                    <div class="input-group" style="width: 100%; margin-left: 0px">
+                        <label class="sr-only" for="address">用户名</label>
+                        <input type="text" id="address" class="form-control" placeholder="请输入送货地址" style="height: 40px">
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-offset-1" style="padding: 0px;">
+                    <p class="inputLabel" >起租日期:</p>
+                </div>
+                <div class="form-group col-md-7" style="padding: 0px">
+                    <div class="input-group" style="width: 100%; margin-left: 0px">
+                        <label class="sr-only" for="startDate">用户名</label>
+                        <input type="date" id="startDate" class="form-control" placeholder="输入提货日期" style="height: 40px">
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-offset-1" style="padding: 0px;">
+                    <p class="inputLabel" >结束日期:</p>
+                </div>
+                <div class="form-group col-md-7" style="padding: 0px">
+                    <div class="input-group" style="width: 100%; margin-left: 0px">
+                        <label class="sr-only" for="endDate">结束日期</label>
+                        <input type="date" id="endDate" class="form-control" placeholder="输入归还日期" style="height: 40px">
+                    </div>
+                </div>
+            </form>
+            <div class="row" style="border: black 0px solid; height: 40px; margin-top: 130px">
+                <div class="col-md-offset-1 col-md-8 tipInfo" style="border: black 0px solid; padding: 0px">诚信交易，有借有还，再借不难</div>
+            </div>
+        </div>
+        <div class="eqptPic col-md-6" style="border: gainsboro 0px solid; box-shadow: 2px 2px 3px gainsboro; height: 100px; left: 10px; top: 20px; background-color: white">
+            <button class="btn-lg btn-danger center-block" type="button" style="width: 50%; height: 50px; margin-top: 30px">立即租用</button>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <div class="newContainer">
+            <div class="footer-text">
+                <p>Contact US @1585084146@qq.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

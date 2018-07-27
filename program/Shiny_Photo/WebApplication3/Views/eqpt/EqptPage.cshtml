@@ -1,0 +1,248 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<script src="~/Resource/eqptPage/js/eqptPageJs.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Resource/eqptPage/css/eqptPageStyle.css">
+<title>equipment</title>
+<!--器材展示-->
+<ul class="nav nav-tabs" role="tablist" id="eqptTabs">
+    <li role="presentation" class="col-md-2"><a href="#type1" role="tab" data-toggle="tab">摄像机</a></li>
+    <li role="presentation" class="active col-md-2"><a href="#type2" role="tab" data-toggle="tab">单反相机</a></li>
+    <li role="presentation" class="col-md-2"><a href="#type3" role="tab" data-toggle="tab">镜头</a></li>
+    <li role="presentation" class="col-md-2"><a href="#type4" role="tab" data-toggle="tab">航拍飞机</a></li>
+    <li role="presentation" class="col-md-2"><a href="#type5" role="tab" data-toggle="tab">三脚架</a></li>
+    <li role="presentation" class="col-md-2"><a href="#type6" role="tab" data-toggle="tab">拍立得</a></li>
+    <li role="presentation" class="col-md-2"><a href="#type7" role="tab" data-toggle="tab">其他</a></li>
+</ul>
+<div class="tab-content" id="eqptTabContent">
+    <div role="tabpanel" class="tab-pane" id="type1">
+        <div class="container-fluid">
+            <ul class="container" style="width: 100%" id="container1">
+                @foreach (var cam in (List<WebApplication3.Models.EQUIPMENT_INFO>)ViewData["CAM"])
+                {
+                    var hrefStr = "../eqpt/eqptBuyPage?equID=" + cam.EQUIPMENT_ID;
+                    var imgSrc = "../../Resource/eqptPage/img/" + cam.EQUIPMENT_ID + ".jpg";
+                    <li class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="wrap"><img src=@imgSrc class="eqptPic"></div>
+                            <div class="caption" style="border: black 0px solid; padding: 0px">
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                    <div class="priceInfo col-md-5 col-md-offset-1">¥@cam.EQUIPMENT_RENT/天</div>
+                                    <a href=@hrefStr class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <a class="col-md-offset-1 col-md-11">品牌：@cam.EQUIPMENT_BRAND</a>
+                                </div>
+                                <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                    <div class="col-md-5 col-md-offset-1 addressDesc">@cam.WAREHOUSE_INFO.WAREHOUSE_ADDRESS</div>
+                                    <div class="col-md-5 numDesc">颜色: @cam.EQUIPMENT_COLOR</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+            <ul class="pagination" id="pagination1">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+    <div role="tabpanel" class="active tab-pane" id="type2">
+        <ul class="container" style="width: 100%" id="container2">
+            @foreach (var dir in (List<WebApplication3.Models.EQUIPMENT_INFO>)ViewData["DIR"])
+            {
+                var hrefStr = "../eqpt/eqptBuyPage?equID=" + dir.EQUIPMENT_ID;
+                var imgSrc = "../../Resource/eqptPage/img/" + dir.EQUIPMENT_ID + ".jpg";
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src=@imgSrc class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">¥@dir.EQUIPMENT_RENT/天</div>
+                                <a href=@hrefStr class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">品牌：@dir.EQUIPMENT_BRAND</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">@dir.WAREHOUSE_INFO.WAREHOUSE_ADDRESS</div>
+                                <div class="col-md-5 numDesc">颜色: @dir.EQUIPMENT_COLOR</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+            
+        </ul>
+        <ul class="pagination" id="pagination2">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="type3">
+        <ul class="container" style="width: 100%" id="container3">
+            @foreach (var head in (List<WebApplication3.Models.EQUIPMENT_INFO>)ViewData["HEAD"])
+            {
+                var hrefStr = "../eqpt/eqptBuyPage?equID=" + head.EQUIPMENT_ID;
+                var imgSrc = "../../Resource/eqptPage/img/" + head.EQUIPMENT_ID + ".jpg";
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src=@imgSrc class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">¥@head.EQUIPMENT_RENT/天</div>
+                                <a href=@hrefStr class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">品牌：@head.EQUIPMENT_BRAND</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">@head.WAREHOUSE_INFO.WAREHOUSE_ADDRESS</div>
+                                <div class="col-md-5 numDesc">颜色: @head.EQUIPMENT_COLOR</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+        <ul class="pagination" id="pagination3">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="type4">
+        <ul class="container" style="width: 100%" id="container4">
+            @foreach (var fly in (List<WebApplication3.Models.EQUIPMENT_INFO>)ViewData["FLY"])
+            {
+                var hrefStr = "../eqpt/eqptBuyPage?equID=" + fly.EQUIPMENT_ID;
+                var imgSrc = "../../Resource/eqptPage/img/" + fly.EQUIPMENT_ID + ".jpg";
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src=@imgSrc class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">¥@fly.EQUIPMENT_RENT/天</div>
+                                <a href=@hrefStr class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">品牌：@fly.EQUIPMENT_BRAND</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">@fly.WAREHOUSE_INFO.WAREHOUSE_ADDRESS</div>
+                                <div class="col-md-5 numDesc">颜色: @fly.EQUIPMENT_COLOR</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+        <ul class="pagination" id="pagination4">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="type5">
+        <ul class="container" style="width: 100%" id="container5">
+            @foreach (var tri in (List<WebApplication3.Models.EQUIPMENT_INFO>)ViewData["TRI"])
+            {
+                var hrefStr = "../eqpt/eqptBuyPage?equID=" + tri.EQUIPMENT_ID;
+                var imgSrc = "../../Resource/eqptPage/img/" + tri.EQUIPMENT_ID + ".jpg";
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src=@imgSrc class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">¥@tri.EQUIPMENT_RENT/天</div>
+                                <a href=@hrefStr class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">品牌：@tri.EQUIPMENT_BRAND</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">@tri.WAREHOUSE_INFO.WAREHOUSE_ADDRESS</div>
+                                <div class="col-md-5 numDesc">颜色: @tri.EQUIPMENT_COLOR</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+         
+            }
+        </ul>
+        <ul class="pagination" id="pagination5">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="type6">
+        <ul class="container" style="width: 100%" id="container6">
+            @foreach (var pai in (List<WebApplication3.Models.EQUIPMENT_INFO>)ViewData["PAI"])
+            {
+                var hrefStr = "../eqpt/eqptBuyPage?equID=" + pai.EQUIPMENT_ID;
+                var imgSrc = "../../Resource/eqptPage/img/" + pai.EQUIPMENT_ID + ".jpg";
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src=@imgSrc class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">¥@pai.EQUIPMENT_RENT/天</div>
+                                <a href=@hrefStr class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">品牌：@pai.EQUIPMENT_BRAND</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">@pai.WAREHOUSE_INFO.WAREHOUSE_ADDRESS</div>
+                                <div class="col-md-5 numDesc">颜色: @pai.EQUIPMENT_COLOR</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+
+            }
+
+          
+        </ul>
+        <ul class="pagination" id="pagination6">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="type7">
+        <ul class="container" style="width: 100%" id="container7">
+            @foreach (var other in (List<WebApplication3.Models.EQUIPMENT_INFO>)ViewData["OTHER"])
+            {
+                var hrefStr = "../eqpt/eqptBuyPage?equID=" + other.EQUIPMENT_ID;
+                var imgSrc = "../../Resource/eqptPage/img/" + other.EQUIPMENT_ID + ".jpg";
+                <li class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="wrap"><img src=@imgSrc class="eqptPic"></div>
+                        <div class="caption" style="border: black 0px solid; padding: 0px">
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px" class="container-fluid">
+                                <div class="priceInfo col-md-5 col-md-offset-1">¥@other.EQUIPMENT_RENT/天</div>
+                                <a href=@hrefStr class="shoppingBtn col-md-5"><span class="glyphicon glyphicon-shopping-cart pull-right" style="font-size: 30px; left: -25px; top: 5px"></span></a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <a class="col-md-offset-1 col-md-11">品牌：@other.EQUIPMENT_BRAND</a>
+                            </div>
+                            <div style="border: #5bc0de 0px solid; height: 45px; width: 100%; padding: 0px; margin-top: 0px" class="container-fluid eqptDesc">
+                                <div class="col-md-5 col-md-offset-1 addressDesc">@other.WAREHOUSE_INFO.WAREHOUSE_ADDRESS</div>
+                                <div class="col-md-5 numDesc">颜色: @other.EQUIPMENT_COLOR</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+            }
+
+            
+        </ul>
+        <ul class="pagination" id="pagination7">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+</div>

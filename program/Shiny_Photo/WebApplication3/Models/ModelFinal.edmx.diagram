@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="283e943152844d41a96d2ca9bba3ee58" Name="Diagram1">
+        <EntityTypeShape EntityType="ModelFinal.AAA" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.ALL_ADDRESS" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.ALL_DEPARTMENT" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.ALL_LOGIN_INFO" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.ALL_PHOTO" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.ALL_USER_TEL" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.CONTRACT_EQUIPMENT_INFO" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.CONTRACT_PHOTO_INFO" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.CUSTOMER" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.DISPATCHING_ORDER_INFO" Width="1.5" PointX="10.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.EMPLOYEE" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.EQUIPMENT_INFO" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.ORDER_EQUIPMENT_INFO" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.TESTTABLE" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelFinal.WAREHOUSE_INFO" Width="1.5" PointX="3.75" PointY="15.125" IsExpanded="true" />
+        <AssociationConnector Association="ModelFinal.SYS_C007588" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007640" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007641" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007661" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007690" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007659" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007660" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007671" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007681" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007682" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007617" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelFinal.SYS_C007672" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

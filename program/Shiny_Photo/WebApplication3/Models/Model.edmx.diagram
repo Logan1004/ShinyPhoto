@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dfa9e50c6db9409bbf6d14ad01c3c8af" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.ALL_ADDRESS" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ALL_DEPARTMENT" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ALL_LOGIN_INFO" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ALL_PHOTO" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ALL_USER_TEL" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CONTRACT_EQUIPMENT_INFO" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CONTRACT_PHOTO_INFO" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CUSTOMER" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DISPATCHING_ORDER_INFO" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EMPLOYEE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EQUIPMENT_INFO" Width="1.5" PointX="6" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ORDER_EQUIPMENT_INFO" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.WAREHOUSE_INFO" Width="1.5" PointX="3.75" PointY="13.875" IsExpanded="true" />
+        <AssociationConnector Association="Model.SYS_C007588" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007640" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007641" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007661" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007690" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007659" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007660" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007671" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007681" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007682" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007617" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.SYS_C007672" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

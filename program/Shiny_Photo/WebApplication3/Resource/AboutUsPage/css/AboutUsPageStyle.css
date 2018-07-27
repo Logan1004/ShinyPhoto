@@ -1,0 +1,69 @@
+.wrap{
+    position: relative;
+    /*left: 200px;*/
+    opacity: 0;
+    width: 100%;
+    height: 400px;
+    transition: 1000ms;
+}
+.wrap img{
+    width: 100%;
+    height: 100%;
+}
+
+#wrap1,#wrap3{
+    left: 50px;
+}
+
+#wrap2{
+    left: -50px;
+}
+
+#wrap4{
+    left: -200px;
+}
+
+#wrap5,#wrap6{
+    top: 100px;
+}
+
+#wrap7{
+    left: 200px;
+}
+
+#wrap8{
+    left: -200px;
+}
+
+#wrap9{
+    top: 100px;
+}
+
+#wrap10{
+    left: 200px;
+}
+
+.memName{
+    position: relative;
+    opacity: 0;
+    top: -20px;
+    transition: 1500ms;
+}
+
+
+.memText{
+    position: relative;
+    opacity: 0;
+    /*left: -200px;*/
+    transition: 1500ms;
+}
+
+#memText1,#memText3{
+    left: -50px;
+}
+
+#memText2{
+    left: 50px;
+}
+
+

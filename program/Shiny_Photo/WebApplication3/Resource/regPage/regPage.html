@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../jquery.cookie.js"></script>
+    <script src="../bootstrap.min.js"></script>
+    <script src="../publicJs.js"></script>
+    <script src="js/regPageJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/regPageStyle.css">
+    <title>Reg</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation" id="mainPageNav">
+    <div class="container-fluid">
+        <div class="navbar-header col-md-3">
+            <div class="navbar-header col-md-3">
+                <img src="../publicImg/Title.png" class="navLogo" id="myLogo">
+            </div>
+        </div>
+        <div class="col-md-3" style="height: 88px"></div>
+        <ul class="nav navbar-nav" style="margin-top: 20px;">
+            <li><a href="../mainPage.html">首页</a></li>
+            <li><a href="../eqptPage/eqptPage.html?curPage=1">器材租凭</a></li>
+            <li><a href="../picPage/picPage.html">图片服务</a></li>
+            <li><a href="../AboutUsPage/AboutUsPage.html">关于我们</a></li>
+            <li><a href="../loginPage/loginPage.html">登录</a></li>
+            <div class="page-header"></div>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="container-fluid" style="padding: 0px; height: 40%; max-height: 100%">
+        <div class="carousel-inner">
+            <img class="topSlideImg" alt="" src="../publicImg/HeadPhoto_1.jpg">
+        </div>
+    </div>
+
+    <!--注册-->
+    <div class="container" style="height: 650px; background-color: white">
+        <div class="row center-block" style="text-align: center; margin-top: 20px">
+            <div class="col-md-3 col-md-offset-2" style="height: 30px; border-bottom: black 1px solid;"></div>
+            <div class="col-md-2" style="font-size: 40px">
+                注册
+            </div>
+            <div class="col-md-3" style="height: 30px; border-bottom: black 1px solid;"></div>
+        </div>
+        <div class="col-md-8 col-md-offset-2" id="regBorder" style="background-color: white">
+            <form style="margin-top: 20px">
+                <!--用户名-->
+                <div class="row" style="margin-top: 25px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel" >用户名:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="userName">用户名</label>
+                            <input type="text" id="userName" class="form-control" placeholder="您的昵称" style="height: 40px">
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">您登陆所使用的用户名</span>-->
+                </div>
+                <!--密码-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel" >密码:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="pwd"></label>
+                            <input type="password" id="pwd" class="form-control" placeholder="您的密码" style="height: 40px">
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">建议您使用数字与字母的组合</span>-->
+                </div>
+                <!--确认密码-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel" >确认密码:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="confirm"></label>
+                            <input type="password" id="confirm" class="form-control" placeholder="确认您的密码" style="height: 40px">
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-2 label-info myTips">建议您使用数字与字母的组合</span>-->
+                </div>
+                <!--地址-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel" >地址信息:</p>
+                    </div>
+                    <div class="form-group col-md-2 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="country"></label>
+                            <input type="text" id="country" class="form-control" placeholder="国家" style="height: 40px">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 32px">
+                            <label class="sr-only" for="city"></label>
+                            <input type="text" id="city" class="form-control" placeholder="城市" style="height: 40px">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 64px">
+                            <label class="sr-only" for="block"></label>
+                            <input type="text" id="block" class="form-control" placeholder="区\县" style="height: 40px">
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">您的地址信息</span>-->
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel" >详细地址:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="detailAddress"></label>
+                            <input type="text" id="detailAddress" class="form-control" placeholder="例如同济大学嘉定校区6号楼233" style="height: 40px">
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">例如同济大学嘉定校区6号楼233</span>-->
+                </div>
+                <!--邮箱-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                    <p class="inputLabel" >邮箱:</p>
+                </div>
+                <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                    <div class="input-group" style="width: 100%; margin-left: 0px">
+                        <label class="sr-only" for="email"></label>
+                        <input type="text" id="email" class="form-control" placeholder="您的邮箱" style="height: 40px">
+                    </div>
+                </div>
+                <!--<span class="col-md-5 col-md-offset-1 label-info myTips">例如同济大学嘉定校区6号楼</span>-->
+            </div>
+                <!--手机-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-2 col-md-offset-1" style="padding: 0px">
+                        <p class="inputLabel" >手机:</p>
+                    </div>
+                    <div class="form-group col-md-7 col-md-offset-1" style="padding: 0px">
+                        <div class="input-group" style="width: 100%; margin-left: 0px">
+                            <label class="sr-only" for="phoneNum"></label>
+                            <input type="text" id="phoneNum" class="form-control" placeholder="您的手机号码" style="height: 40px">
+                        </div>
+                    </div>
+                    <!--<span class="col-md-5 col-md-offset-1 label-info myTips">我们承若不会泄露您的个人信息</span>-->
+                </div>
+            </form>
+            <a href="../mainPage.html" class="col-md-9 col-md-offset-2 btn-lg btn-info" type="button" style="margin-top: 30px" id="hrefBtn">注册</a>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="newContainer">
+            <div class="footer-text">
+                <p>Contact US @1585084146@qq.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

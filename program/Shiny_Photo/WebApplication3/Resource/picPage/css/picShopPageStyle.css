@@ -1,0 +1,34 @@
+#picTabs{
+    width: 90%;
+    background-color: white;
+}
+
+
+#picTabContent{
+    margin-top: 10px;
+    background-color: white;
+    width: 90%;
+}
+#picTabContent li{
+    list-style: none;
+}
+
+.wrap{
+    width: 100%;
+    height: 300px;
+    border: black 0px solid;
+}
+
+.thumbnail .caption{
+    height: 40px;
+}
+
+.loveNum{
+    font-size: 20px;
+}
+
+.loveIcon:hover{
+    transition: 300ms;
+    color: #5bc0de;
+    cursor: pointer;
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="../jquery.cookie.js"></script>
+    <script src="../bootstrap.min.js"></script>
+    <script src="js/ajaxfileupload.js"></script>
+    <script src="../publicJs.js"></script>
+    <script src="js/adminPageJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../publicStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/adminPageStyle.css">
+    <title>admin</title>
+</head>
+<body>
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation" id="mainPageNav">
+    <div class="container-fluid">
+        <div class="col-md-1"></div>
+        <div class="navbar-header col-md-3">
+            <div class="navbar-header col-md-3">
+                <img src="../publicImg/Logo_lg.png" class="navLogo" id="myLogo">
+            </div>
+        </div>
+        <div class="col-md-3" style="height: 88px"></div>
+        <ul class="nav navbar-nav" style="margin-top: 20px;">
+            <li><a href="../mainPage.html">首页</a></li>
+            <li><a href="../eqptPage/eqptPage.html?curPage=1">器材租凭</a></li>
+            <li><a href="../picPage/picPage.html">图片服务</a></li>
+            <li><a href="../AboutUsPage/AboutUsPage.html">关于我们</a></li>
+            <li><a href="../loginPage/loginPage.html">登录</a></li>
+            <div class="page-header"></div>
+        </ul>
+    </div>
+</nav>
+    <!--顶部图片-->
+    <div id="top" style="width: 100%">
+    <div class="wrap" style="width: 100%; height: 400px">
+        <img src="../publicImg/timg.jpg" style="width: 100%; height: 100%">
+    </div>
+</div>
+    <!--用户服务-->
+    <ul class="nav nav-tabs container-fluid" role="tablist" id="adminTab">
+        <li role="presentation" class="col-md-3 active"><a href="#service1" role="tab" data-toggle="tab" style="padding: 0px">租借订单管理</a></li>
+        <li role="presentation" class="col-md-3"><a href="#service2" role="tab" data-toggle="tab" style="padding: 0px">修图订单管理</a></li>
+        <li role="presentation" class="col-md-3"><a href="#service3" role="tab" data-toggle="tab" style="padding: 0px">职员信息管理</a></li>
+        <li role="presentation" class="col-md-3"><a href="#service4" role="tab" data-toggle="tab" style="padding: 0px">用户信息管理</a></li>
+    </ul>
+
+    <div class="tab-content container-fluid" id="adminTabContent">
+        <div class="tab-pane fade in active" id="service1">
+            <div class="container" style="margin-top: 50px">
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入订单号" id="order1search1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入用户ID" id="order1search2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入设备号" id="order1search3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入起租日期" id="order1search4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入结束日期" id="order1search5">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入金额" id="order1search6">
+                    </div>
+                    <button class="btn btn-info" style="width: 100px">搜索</button>
+                    <button class="btn btn-success" style="width: 100px">添加</button>
+                </form>
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入订单号" id="order1input1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入用户ID" id="order1input2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入设备号" id="order1input3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入起租日期" id="order1input4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入结束日期" id="order1input5">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入金额" id="order1input6">
+                    </div>
+                    <button class="btn btn-success" style="width: 100px">保存</button>
+                    <button class="btn btn-danger" style="width: 100px">取消</button>
+                </form>
+            </div>
+            <div class="container">
+            <table class="table mytable table-striped table-bordered table-hover" style="margin-top: 50px; width: 90%">
+                <thead class="bg-info">
+                <tr><th>订单号</th><th>用户ID</th><th>设备号</th><th>起租日期</th><th>结束日期</th><th>金额</th><th>操作</th></tr>
+                </thead>
+                <tbody id="orderTable1">
+                <tr><td id="testTd">1475</td><td>144</td><td>314</td><td>2018-6-26</td><td>2018-7-26</td><td>1000</td>
+                <td style="width: 100px">
+                    <button><span class="glyphicon glyphicon-remove"></span></button>
+                    <button><span class="glyphicon glyphicon-edit"></span></button>
+                </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="row" style="text-align: center">
+                <ul class="pagination" style="border: black 1px solid;" id="pagination1">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="service2">
+            <div class="container" style="margin-top: 50px">
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入照片ID" id="order2search1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入顾客ID" id="order2search2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入修图师ID" id="order3search3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入开始日期" id="order4search4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入结束日期" id="order5search5">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="金额" id="order6search6">
+                    </div>
+                    <button class="btn btn-info" style="width: 100px">搜索</button>
+                    <button class="btn btn-success" style="width: 100px">添加</button>
+                </form>
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入照片ID" id="order2input1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入顾客ID" id="order2input2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入修图师ID" id="order2input3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入开始日期" id="order2input4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" type="date" style="width: 150px" placeholder="输入结束日期" id="order2input5">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入职位" id="order2input6">
+                    </div>
+                    <button class="btn btn-success" style="width: 100px">保存</button>
+                    <button class="btn btn-danger" style="width: 100px">取消</button>
+                </form>
+            </div>
+            <div class="container">
+                <table class="table mytable table-striped table-bordered table-hover" style="margin-top: 50px; width: 90%">
+                    <thead class="bg-info">
+                    <tr><th>照片ID</th><th>顾客ID</th><th>修图师ID</th><th>开始日期</th><th>结束日期</th><th>金额</th><th>操作</th></tr>
+                    </thead>
+                    <tbody id="orderTable2">
+                    <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>
+                        <td style="width: 100px">
+                            <button><span class="glyphicon glyphicon-remove"></span></button>
+                            <button><span class="glyphicon glyphicon-edit"></span></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="row" style="text-align: center">
+                    <ul class="pagination" style="border: black 1px solid;" id="pagination2">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade in" id="service3">
+            <div class="container" style="margin-top: 50px">
+                <form class="form-inline" style="width: 100%">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入ID" id="empsearch1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入姓名" id="empsearch2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入性别" id="empsearch3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入邮箱" id="empsearch4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入部门" id="emp5search5">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入职位" id="emp6search6">
+                    </div>
+                    <button class="btn btn-info" style="width: 100px">搜索</button>
+                    <button class="btn btn-success" style="width: 100px">添加</button>
+                </form>
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入ID" id="empinput1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入姓名" id="empinput2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入性别" id="empinput3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入邮箱" id="empinput4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入部门" id="empinput5">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 150px" placeholder="输入职位" id="empinput6">
+                    </div>
+                    <button class="btn btn-success" style="width: 100px">保存</button>
+                    <button class="btn btn-danger" style="width: 100px">取消</button>
+                </form>
+            </div>
+            <div class="container">
+                <table class="table mytable table-striped table-bordered table-hover" style="margin-top: 50px; width: 90%">
+                    <thead class="bg-info">
+                    <tr><th>ID</th><th>姓名</th><th>性别</th><th>邮箱</th><th>部门</th><th>职位</th><th>操作</th></tr>
+                    </thead>
+                    <tbody id="empTable">
+                    <tr><td>1652781</td><td>zhaowei</td><td>男</td><td>zhaowei@163.com</td><td>修图部</td><td>员工</td>
+                        <td style="width: 100px">
+                            <button><span class="glyphicon glyphicon-remove"></span></button>
+                            <button><span class="glyphicon glyphicon-edit"></span></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="row" style="text-align: center">
+                    <ul class="pagination" style="border: black 1px solid;" id="pagination3">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade in" id="service4">
+            <div class="container" style="margin-top: 50px">
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入ID" id="usersearch1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入姓名" id="usersearch2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入性别" id="usersearch3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入住址" id="usersearch4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入邮箱" id="usersearch5">
+                    </div>
+                    <button class="btn btn-info" style="width: 100px">搜索</button>
+                    <button class="btn btn-success" style="width: 100px">添加</button>
+                </form>
+                <form class="form-inline">
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入ID" id="userinput1">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入姓名" id="userinput2">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入性别" id="userinput3">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入住址" id="userinput4">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon sr-only"><span class="glyphicon glyphicon-search"></span></div>
+                        <input class="form-control" style="width: 180px" placeholder="输入邮箱" id="userinput5">
+                    </div>
+                    <button class="btn btn-success" style="width: 100px">保存</button>
+                    <button class="btn btn-danger" style="width: 100px">取消</button>
+                </form>
+            </div>
+            <div class="container">
+                <table class="table mytable table-striped table-bordered table-hover" style="margin-top: 50px; width: 90%">
+                    <thead class="bg-info">
+                    <tr><th>ID</th><th>姓名</th><th>性别</th><th>住址</th><th>邮箱</th><th>操作</th></tr>
+                    </thead>
+                    <tbody id="userTable">
+                    <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>
+                        <td style="width: 100px">
+                            <button><span class="glyphicon glyphicon-remove"></span></button>
+                            <button><span class="glyphicon glyphicon-edit"></span></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="row" style="text-align: center">
+                    <ul class="pagination" style="border: black 1px solid;" id="pagination4">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

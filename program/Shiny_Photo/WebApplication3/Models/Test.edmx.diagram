@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e15b8108c1ac4a298bc45fc697abd32c" Name="Diagram1">
+        <EntityTypeShape EntityType="Logan1.AAA" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.ALL_ADDRESS" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.ALL_DEPARTMENT" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.ALL_LOGIN_INFO" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.ALL_PHOTO" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.ALL_USER_TEL" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.CONTRACT_EQUIPMENT_INFO" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.CONTRACT_PHOTO_INFO" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.CUSTOMER" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.DISPATCHING_ORDER_INFO" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.EMPLOYEE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.EQUIPMENT_INFO" Width="1.5" PointX="6" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.ORDER_EQUIPMENT_INFO" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Logan1.WAREHOUSE_INFO" Width="1.5" PointX="3.75" PointY="13.875" IsExpanded="true" />
+        <AssociationConnector Association="Logan1.SYS_C007588" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007640" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007641" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007661" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007690" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007659" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007660" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007671" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007681" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007682" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007617" ManuallyRouted="false" />
+        <AssociationConnector Association="Logan1.SYS_C007672" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

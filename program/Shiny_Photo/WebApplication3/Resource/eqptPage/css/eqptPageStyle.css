@@ -1,0 +1,83 @@
+/*器材展示*/
+#eqptTabs{
+    background-color: white;
+    margin-top: 20px;
+}
+#eqptTabs  li a{
+    text-align: center;
+    font-size: 24px;
+}
+#eqptTabContent{
+    background-color: white;
+    text-align: center;
+    border: black 1px solid;
+}
+#eqptTabContent .thumbnail:hover{
+    transition: 500ms;
+    box-shadow: 2px 4px 6px #000;
+}
+.eqptPic{
+    border: #9d9d9d 1px solid;
+    width: 100%;
+    height: 100%;
+}
+.eqptPic:hover{
+}
+.wrap{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.priceInfo{
+    font-family: 微软雅黑;
+    position: relative;
+    text-align: left;
+    width: 50%;
+    font-size: 20px;
+    display: inline-block;
+    left: -10px;
+    top: 8px;
+}
+
+.shoppingBtn{
+    color: black;
+    display: inline-block;
+}
+
+.eqptDesc a{
+    font-family: 微软雅黑;
+    top: 10px;
+    left: 3px;
+    text-align: left;
+    padding: 0px;
+    text-decoration: none;
+    transition: 500ms;
+    color: black;
+}
+
+.eqptDesc a:hover{
+    cursor: pointer;
+    color: #5bc0de;
+}
+
+.addressDesc{
+    font-family: 微软雅黑;
+    top: 15px;
+    transition: 500ms;
+    text-align: left;
+    left: -13px;
+}
+.addressDesc:hover{
+    color: #5bc0de;
+}
+
+.numDesc{
+    font-family: 微软雅黑;
+    top: 15px;
+    transition: 500ms;
+    text-align: right;
+    left: 10px;
+}
+.numDesc:hover{
+    color: #5bc0de;
+}

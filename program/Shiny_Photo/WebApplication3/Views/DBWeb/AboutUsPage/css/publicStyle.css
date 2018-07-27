@@ -1,0 +1,45 @@
+html,body{
+    height: 100%;
+}
+/*顶部导航栏*/
+.navLogo{
+    transition: 1200ms;
+    height: 120px;
+    width: 240px;
+}
+.navbar .nav > li:hover .dropdown-menu {
+    display: block;
+}
+#mainPageNav{
+    border: 0px;
+    padding: 10px;
+    height: 144px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 800ms;
+}
+#mainPageNav .page-header{
+    border-bottom: 3px solid #eee;
+}
+#mainPageNav ul{
+    transition: 800ms;
+}
+#mainPageNav ul li a{
+    transition: 800ms;
+    font-size: 20px;
+    color: black;
+}
+/*顶部轮播图*/
+#topSlide{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+#topSlide .carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+.topSlideImg{
+    width: 100%;
+    height: 100%;
+}

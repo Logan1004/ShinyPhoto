@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebApplication3.Models.Entities2>
+@{
+    ViewBag.Title = "Update";
+}
+<h2>EEEEE</h2>
+@foreach (var item in Model.CUSTOMERs) { 
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "NewsEdit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "NewsDetails", new { id=item.Id })|
+            @tml.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+        <td>
+            @item.Title 
+        </td>
+        <td>
+            @String.Format("{0:g}", item.CreateTime) 
+        </td>
+        <td>
+            @item.Content
+        </td>
+    </tr>
+  } 
